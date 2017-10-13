@@ -14,19 +14,19 @@ rm xx
 rm -rf xx
 ```
 
-## 新建
+## 2. 新建
 #### 新建目录
 ```
 mkdir x
 ```
 
-## 解压
+## 3. 解压
 #### 将.tar.gz压缩文件解压到xx目录下
 ```
 tar zxvf xx.tar.gz -C xx
 ```
 
-## 环境变量相关文件
+## 4. 环境变量相关文件
 #### 设置临时环境变量
 ```
 export PATH=/xx/xx/.../bin:$PATH

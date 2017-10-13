@@ -20,7 +20,7 @@ rm -rf xx
 mkdir x
 ```
 
-## 解压<hr>
+## 解压
 #### 将.tar.gz压缩文件解压到xx目录下
 ```
 tar zxvf xx.tar.gz -C xx

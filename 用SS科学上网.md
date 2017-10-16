@@ -11,3 +11,25 @@
 ## 3. ss服务器端的搭建
 1. 直接在DO上登录主机，我因为总是登不上网站，所有在WIN10上使用XShell连接上的主机。也有不少人推荐使用putty，这个我没有用过，感觉XShell还是挺好用的，虽然界面有点丑...
 2. 下面开始安装SS并进行配置了：<br/>
+* 更新源和本地包
+`
+sudo apt-get update
+sudo apt-get upgrade
+`
+* 安装python，安装过就不用了
+`
+sudo apt-get install python
+`
+* 安装pip并更新
+`
+sudo apt-get install python-pip
+sudo install --upgrade pip
+`
+* 安装ss
+`
+sudo pip install shadowsocks
+`
+* 配置ss
+`
+
+`

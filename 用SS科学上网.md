@@ -29,7 +29,12 @@ sudo install --upgrade pip
 `
 sudo pip install shadowsocks
 `
-* 配置ss
+* 配置ss，位置可以自己选择
 `
+vim /etc/shadowsocks.json
+`
+```bash
+{
 
-`
+}
+```

@@ -96,7 +96,7 @@ less /var/log/shadowsocks.log
 ## 4. 客户端的搭建
 1. windows系统的配置：
 
-比较简单，网上下载ss客户端安装，安装json文件进行配置即可
+比较简单，网上下载[ss客户端](https://github.com/shadowsocks/shadowsocks-windows/releases)安装，按照json文件进行配置即可
 2. ubuntu桌面版的配置：
 1. 安装shadowsocks-qt5
 ```
@@ -105,8 +105,9 @@ sudo apt-get update
 sudo apt-get install shadowsocks-qt5
 ```
 2. 搜索出应用程序`shadowsocks-qt5`按照json文件进行配置
-3. 非全局代理时（个人建议这样），对于浏览器要安装插件，这里暂时不做详细介绍了
+3. 非全局代理时（个人建议这样），对于浏览器（chrome、firefox）要安装插件**Proxy SwitchyOmega**，这里不做介绍了。
 
 ## 附录
 1. [DO的注册及服务器端的配置](http://www.jianshu.com/p/e186273b631f)
 2. [GitHub中ss的相关内容](https://github.com/shadowsocks)
+3. [ss的相关配置介绍](https://wiki.archlinux.org/index.php/Shadowsocks_(%E7%AE%80%E4%BD%93%E4%B8%AD%E6%96%87))

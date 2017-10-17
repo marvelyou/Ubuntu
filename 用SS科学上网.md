@@ -78,9 +78,9 @@ vim /etc/rc.local
 /usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
 `
 4. 利用tcp拥塞控制的BBR算法优化
-用命令从网上安装安装即可：
-`
+命令从网上安装即可：
+```
 wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
 chmod +x bbr.sh
 ./bbr.sh
-`
+```

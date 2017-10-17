@@ -57,14 +57,23 @@ vim /etc/shadowsocks.json
 `fast_open`可能提高速度，ubuntu系统中建议使用； <br/>
 `workers`这个暂时没有多做了解，不太懂时就这样填即可。 <br/>
 * 启动ss
-```bash
+`
 sudo ssserver -c /etc/shadowsocks.json -d start
-```
+`
 * 关闭
-```bash
+`
 sudo ssserver -c /etc/shadowsocks.json -d stop
-```
+`
 * 重启，修改json文件后
-```bash
+`
 sudo ssserver -c /etc/shadowsocks.json -d restart
+`
+3. 配置ss使其在服务器启动时自动运行
+在/etc/rc.local文件中`exit 0`前面一行添加启动的语句即可：
+`
+vim /etc/rc.local
+`
+添加语句：
+```bash
+/usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
 ```

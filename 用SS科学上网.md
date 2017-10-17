@@ -35,6 +35,37 @@ vim /etc/shadowsocks.json
 `
 ```bash
 {
-
+"server":"::",
+"timeout":300,
+"port_password":{
+"100000":"your password1",
+"100001":"your password2",
+"100002":"your password3"
+},
+"local_port":1080,
+"method":"aes-256-cfb",
+"fast_open":true,
+"workers":1
 }
 ```
+其中：
+`server`是服务器的IP地址；
+`timeout`是最长连接时间延迟；
+`port_password`用来设置多个端口以及对应密码；
+`local_port`是本地端口，可以不用管；
+`method`是传输的加密方式；
+`fast_open`可能提高速度，ubuntu系统中建议使用；
+`workers`这个暂时没有多做了解，不太懂时就这样填即可。
+
+* 启动ss，使得刚才的配置生效
+`
+sudo ssserver -c /etc/shadowsocks.json -d start
+`
+*关闭*
+`
+sudo ssserver -c /etc/shadowsocks.json -d stop
+`
+*重启，修改json文件后*
+`
+sudo ssserver -c /etc/shadowsocks.json -d restart
+`

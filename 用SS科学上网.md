@@ -49,23 +49,22 @@ vim /etc/shadowsocks.json
 }
 ```
 其中：
-`server`是服务器的IP地址；
-`timeout`是最长连接时间延迟；
-`port_password`用来设置多个端口以及对应密码；
-`local_port`是本地端口，可以不用管；
-`method`是传输的加密方式；
-`fast_open`可能提高速度，ubuntu系统中建议使用；
-`workers`这个暂时没有多做了解，不太懂时就这样填即可。
-
+`server`是服务器的IP地址；<br/>
+`timeout`是最长连接时间延迟；<br/>
+`port_password`用来设置多个端口以及对应密码；<br/>
+`local_port`是本地端口，可以不用管；<br/>
+`method`是传输的加密方式；<br/>
+`fast_open`可能提高速度，ubuntu系统中建议使用；<br/>
+`workers`这个暂时没有多做了解，不太懂时就这样填即可。<br/>
 * 启动ss，使得刚才的配置生效
-`
+```bash
 sudo ssserver -c /etc/shadowsocks.json -d start
-`
+```
 *关闭*
-`
+```bash
 sudo ssserver -c /etc/shadowsocks.json -d stop
-`
+````
 *重启，修改json文件后*
-`
+```bash
 sudo ssserver -c /etc/shadowsocks.json -d restart
-`
+```

@@ -98,6 +98,7 @@ less /var/log/shadowsocks.log
 
 比较简单，网上下载[ss客户端](https://github.com/shadowsocks/shadowsocks-windows/releases)安装，按照json文件进行配置即可
 2. ubuntu桌面版的配置：
+
 1. 安装shadowsocks-qt5
 ```
 sudo add-apt-repository ppa:hzwhuang/ss-qt5

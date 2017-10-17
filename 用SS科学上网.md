@@ -74,10 +74,12 @@ sudo ssserver -c /etc/shadowsocks.json -d restart
 `
 vim /etc/rc.local
 `
+
 添加语句：
 `
 /usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
 `
+
 4. 利用tcp拥塞控制的BBR算法优化
 
 命令从网上安装即可：
@@ -86,6 +88,10 @@ wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.s
 chmod +x bbr.sh
 ./bbr.sh
 ```
+5. 日记查看
+`
+less /var/log/shadowsocks.log
+`
 
 ## 4. 客户端的搭建
 1. windows系统的配置：

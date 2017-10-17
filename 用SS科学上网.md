@@ -69,6 +69,7 @@ sudo ssserver -c /etc/shadowsocks.json -d stop
 sudo ssserver -c /etc/shadowsocks.json -d restart
 `
 3. 配置ss使其在服务器启动时自动运行
+
 在/etc/rc.local文件中`exit 0`前面一行添加启动的语句即可：
 `
 vim /etc/rc.local
@@ -78,9 +79,24 @@ vim /etc/rc.local
 /usr/bin/python /usr/local/bin/ssserver -c /etc/shadowsocks.json -d start
 `
 4. 利用tcp拥塞控制的BBR算法优化
+
 命令从网上安装即可：
 ```
 wget –no-check-certificate https://github.com/teddysun/across/raw/master/bbr.sh
 chmod +x bbr.sh
 ./bbr.sh
 ```
+
+## 4. 客户端的搭建
+1. windows系统的配置：
+
+比较简单，网上下载ss客户端安装，安装json文件进行配置即可
+2. ubuntu桌面版的配置：
+1. 安装shadowsocks-qt5
+```
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+```
+2. 搜索出应用程序`shadowsocks-qt5`按照json文件进行配置
+3. 非全局代理时（个人建议这样），对于浏览器要安装插件

@@ -48,7 +48,7 @@ vim /etc/shadowsocks.json
 "workers":1
 }
 ```
-其中：
+其中：<br/>
 `server`是服务器的IP地址； <br/>
 `timeout`是最长连接时间延迟； <br/>
 `port_password`用来设置多个端口以及对应密码； <br/>
@@ -56,15 +56,15 @@ vim /etc/shadowsocks.json
 `method`是传输的加密方式； <br/>
 `fast_open`可能提高速度，ubuntu系统中建议使用； <br/>
 `workers`这个暂时没有多做了解，不太懂时就这样填即可。 <br/>
-* 启动ss，使得刚才的配置生效
+* 启动ss
 ```bash
 sudo ssserver -c /etc/shadowsocks.json -d start
 ```
-**关闭** <br/>
+* 关闭
 ```bash
 sudo ssserver -c /etc/shadowsocks.json -d stop
 ```
-**重启，修改json文件后** <br/>
+* 重启，修改json文件后
 ```bash
 sudo ssserver -c /etc/shadowsocks.json -d restart
 ```
